@@ -9,7 +9,7 @@ contract mappingTest {
     function test1() public {
         balance[msg.sender] = 123;
         uint a = balance[msg.sender];
-        uint b = balance[address(1)];
+        uint b = balance[address(1)];//此处address(1)的值是Uint的默认值:0
 
         balance[msg.sender] += 111;
 
