@@ -11,6 +11,7 @@ pragma solidity >=0.7.0 <0.9.0;
 contract SendEther {
     constructor() payable {}
     //为何开始要给构造函数payable呢?
+    //为了在创建合约时即可给该合约打币
 
     receive() payable external {}
 
