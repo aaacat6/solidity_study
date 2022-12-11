@@ -20,6 +20,11 @@ contract fallbackCon {
     }
     //没有msg.data时调用receive
 
+    function getBal() public view returns (uint) {
+        uint bal = address(this).balance;
+        return bal;
+    }
+
     //当合约中没有receive函数时,无论如何都时调用fallback
     //当合约中没有fallback函数,如果带有msg.sender调用,会报错
 }
