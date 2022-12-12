@@ -3,14 +3,14 @@
 pragma solidity >=0.7.0 <0.9.0;
 
 contract getFun{
-    // function setx(address _test,uint _x) external {
-    //     TestContract(_test).setx(_x);
-    // }
+    function setx(address _test,uint _x) external {
+        TestContract(_test).setx(_x);
+    }
     //写法1
 
-    function setx(TestContract _test,uint _x) external {
-        _test.setx(_x);
-    }   
+    // function setx(TestContract _test,uint _x) external {
+    //     _test.setx(_x);
+    // }   
     //写法2
 
 
@@ -68,5 +68,7 @@ contract TestContract{
     function getContractBal() external view returns(uint) {
         return address(this).balance;
     } 
+
+
 
 }
